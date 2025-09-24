@@ -50,8 +50,9 @@ public class PlayerController : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             score++;
+            coinSound.Play();
             SetscoreText();
-            if(score >= 5)
+            if(score >= 10)
             {
                 gate.gameObject.SetActive(false);
             }
@@ -67,7 +68,7 @@ public class PlayerController : MonoBehaviour
     {
         scoreText.text="Score: "+score.ToString();
 
-        if(score >= 10)
+        if(score >= 15)
         {
             winText.text = "You win! Press R to restart or ESC to exit";
         }
