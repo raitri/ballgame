@@ -50,7 +50,6 @@ public class PlayerController : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             score++;
-            coinSound.Play();
             SetscoreText();
             if(score >= 10)
             {
